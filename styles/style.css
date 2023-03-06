@@ -1,0 +1,191 @@
+:root {
+    --bg-color: rgb(225, 225, 225);
+    --text-size: 1.2rem;
+    --background-image1: url(../images/background.jpg);
+    --background-image2: url(../images/ARR.png);
+}
+html,
+body {
+    margin: 0 auto;
+    font-size: var(--text-size);
+    background-image: var(--background-image1);
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: relative;
+}
+
+.left_side,
+.right_side {
+    width: 50%;
+    height: 100%;
+}
+.left_side {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+.left_side img {
+    width: 100%;
+    height: 60%;
+}
+.right_side {
+    background-color: #2c74f7;
+    display: flex;
+    align-items: center;
+}
+.connect_form {
+    width: 70%;
+    height: 50%;
+    margin: 0 auto;
+    display: grid;
+    align-items: center;
+}
+form {
+    margin: 0 auto;
+    margin-top: -15%;
+    width: 80%;
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 1em;
+    background-color: white;
+    -moz-box-shadow: -1px 7px 40px -4px rgba(46, 42, 42, 0.82);
+    -webkit-box-shadow: -1px 7px 40px -4px rgba(46, 42, 42, 0.82);
+    box-shadow: -1px 7px 40px -4px rgba(46, 42, 42, 0.82);
+}
+.connect_form .inputbox {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 50px;
+}
+.connect_form .inputbox input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 95%;
+    border: 2px solid #000;
+    outline: none;
+    background: none;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 1.2em;
+}
+.connect_form .inputbox:last-child {
+    margin-bottom: 0;
+}
+.connect_form .inputbox span {
+    position: absolute;
+    top: 14px;
+    left: 20px;
+    font-size: 1em;
+    transition: 0.6s;
+    font-family: sans-serif;
+    background-color: white;
+}
+.connect_form .inputbox input:focus ~ span,
+.connect_form .inputbox input:not(:placeholder-shown) ~ span,
+.connect_form .inputbox input:valid ~ span {
+    transform: translateX(-13px) translateY(-35px);
+    font-size: 1em;
+    color: rgb(155, 61, 238);
+}
+.connect_form .inputbox [type="submit"] {
+    width: 100%;
+    background: dodgerblue;
+    color: #fff;
+    border: #fff;
+    cursor: pointer;
+}
+.connect_form .inputbox [type="button"] {
+    width: 100%;
+    background: rgb(45, 159, 45);
+    color: #fff;
+    border: #fff;
+    cursor: pointer;
+}
+.affiche_mot {
+    margin-bottom: 30px;
+}
+.affiche_mot input {
+    width: 20px;
+    height: 20px;
+}
+/*toast*/
+#snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+#snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
+.icon_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#icon {
+    width: 38%;
+    height: 1%;
+    margin: 5px;
+}
